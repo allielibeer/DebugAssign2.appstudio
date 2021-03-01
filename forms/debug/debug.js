@@ -7,26 +7,24 @@ friends array.
 */
 
 let friends = ["Michelle", "Betty", "Bev", "Amy","Marsha"]
-let choice= prompt(`Which of my friends do you want to invite over? ${friends[1]}, ${friends[2]}, ${friends[3]}, ${friends[4]}, or ${friends[5]}?`)
+let choice= prompt(`Which of my friends do you want to invite over? ${friends[0]}, ${friends[1]}, ${friends[2]}, ${friends[3]}, or ${friends[4]}?`)
 
 let userName = prompt("Enter your first name please. ")
 let userAge = prompt("Enter your current age in years. ")
 
-if age > 20
-    messageNum = 1
-else if age > 30 AND < 40
-    messageNum = 2
-else
-    messageNum = 3
+let message = [ "You are in your twenties!", "You are in your thirties!", "You are over 40! Wow!"]
     
-swich (messagenum) {
-case '1':
-    alert("You are in your twenties!")
-    break
-case '2':
-    alet("You are in your thirties! ")
-case '3':
-    alert("You are over 40! Wow!)
-    break
+switch (true) {
+case (userAge > 20 && userAge <30):
+    alert(`${message[0]}`)
+    break;
+case (userAge > 30 && userAge < 40):
+    alert(`${message[1]}`)
+    break;
+case (userAge > 40):
+    alert(`${message[2]}`)
+    break;
 default:
-    alert("I have no idea how old you are. ")
+    alert("I have no idea how old you are.")
+    break;
+    }
